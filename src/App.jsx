@@ -4,16 +4,16 @@ import { Header, Footer } from "./components";
 
 const MAX_FILES_UPLOAD_ALLOWED = 10;
 const A4_WIDTH = 210;
-const A4_HEIGHT = 297;
+//const A4_HEIGHT = 297;
 
 function App() {
   const [imagesList, setImagesList] = useState([]);
   return (
     <div className="h-screen flex flex-col justify-start">
-      <Header title="Image to PDF Convertor" />
+      <Header title="Image to PDF Convertor" height="10vh" />
       <main
         className="p-4 flex flex-col justify-start"
-        style={{ height: "80vh" }}
+        style={{ height: "75vh" }}
       >
         <div>
           <label
@@ -67,7 +67,7 @@ function App() {
           )}
         </div>
       </main>
-      <Footer />
+      <Footer height="15vh" />
     </div>
   );
 }
