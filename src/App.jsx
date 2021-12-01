@@ -1,6 +1,6 @@
 import { jsPDF } from "jspdf";
 import { useState } from "react";
-import { Header } from "./components";
+import { Header, Footer } from "./components";
 
 const MAX_FILES_UPLOAD_ALLOWED = 10;
 const A4_WIDTH = 210;
@@ -67,9 +67,7 @@ function App() {
           )}
         </div>
       </main>
-      <footer className="p-4" style={{ height: "10vh" }}>
-        By - @Shivaansh Agarwal
-      </footer>
+      <Footer />
     </div>
   );
 }
