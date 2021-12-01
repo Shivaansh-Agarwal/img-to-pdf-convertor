@@ -1,5 +1,6 @@
 import { jsPDF } from "jspdf";
 import { useState } from "react";
+import { Header } from "./components";
 
 const MAX_FILES_UPLOAD_ALLOWED = 10;
 const A4_WIDTH = 210;
@@ -9,9 +10,7 @@ function App() {
   const [imagesList, setImagesList] = useState([]);
   return (
     <div className="h-screen flex flex-col justify-start">
-      <header className="p-4 text-4xl font-semibold" style={{ height: "10vh" }}>
-        Image to PDF Convertor
-      </header>
+      <Header title="Image to PDF Convertor" />
       <main
         className="p-4 flex flex-col justify-start"
         style={{ height: "80vh" }}
