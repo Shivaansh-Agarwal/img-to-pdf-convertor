@@ -4,7 +4,7 @@ import { Header, Main, Footer } from "./components";
 function App() {
   const [isDarkModeEnabled, setDarkModeVisiblity] = useState(getCurrentTheme);
   useEffect(() => {
-    const darkMode = localStorage.getItem("isDarkModeEnabled");
+    const darkMode = JSON.parse(localStorage.getItem("isDarkModeEnabled"));
     if (!darkMode) {
       localStorage.setItem("isDarkModeEnabled", false);
     }
@@ -27,7 +27,9 @@ function App() {
 }
 
 function getCurrentTheme() {
-  const isDarkModeEnabled = localStorage.getItem("isDarkModeEnabled");
-  return isDarkModeEnabled === true ? true : false;
+  const isDarkModeEnabled = JSON.parse(
+    localStorage.getItem("isDarkModeEnabled")
+  );
+  return isDarkModeEnabled ? true : false;
 }
 export default App;
