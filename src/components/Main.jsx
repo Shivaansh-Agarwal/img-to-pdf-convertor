@@ -67,8 +67,3 @@ function generatePDF(imagesList, imagesDimensionsList) {
   const pdfURL = doc.output("bloburl");
   window.open(pdfURL, "_blank");
 }
-
-function getAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
-  const ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
-  return { width: srcWidth * ratio, height: srcHeight * ratio };
-}
