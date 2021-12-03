@@ -7,11 +7,14 @@ const MAX_FILES_UPLOAD_ALLOWED = 10;
 const A4_WIDTH = 210;
 //const A4_HEIGHT = 297;
 
-export const Main = ({ height }) => {
+export const Main = ({ minHeight, maxHeight }) => {
   const [imagesList, setImagesList] = useState([]);
 
   return (
-    <main className="p-4 flex flex-col justify-start" style={{ height }}>
+    <main
+      className="p-4 flex flex-col justify-start"
+      style={{ minHeight, maxHeight }}
+    >
       <ButtonsBar
         imagesList={imagesList}
         setImagesList={setImagesList}

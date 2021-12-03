@@ -14,12 +14,13 @@ function App() {
       <div className="h-screen flex flex-col justify-start dark:bg-gray-800">
         <Header
           title="Image to PDF Convertor"
-          height="10vh"
+          minHeight="10%"
+          maxHeight="10vh"
           isDarkModeEnabled={isDarkModeEnabled}
           setDarkModeVisiblity={setDarkModeVisiblity}
         />
-        <Main height="75vh" />
-        <Footer height="15vh" />
+        <Main minHeight="70%" maxHeight="75vh" />
+        <Footer minHeight="20%" maxHeight="15vh" />
       </div>
     </div>
   );

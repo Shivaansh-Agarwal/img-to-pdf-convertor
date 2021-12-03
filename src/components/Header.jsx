@@ -2,16 +2,17 @@ import { MdModeNight, MdLightMode } from "react-icons/md";
 
 export const Header = ({
   title,
-  height,
+  minHeight,
+  maxHeight,
   isDarkModeEnabled,
   setDarkModeVisiblity,
 }) => {
   return (
     <header
-      className="p-4 text-4xl font-semibold flex flex-row justify-between items-center"
-      style={{ height }}
+      className="p-4 text-2xl sm:text-4xl flex flex-row justify-between items-center"
+      style={{ minHeight, maxHeight }}
     >
-      <div className="dark:text-gray-200">{title}</div>
+      <div className="dark:text-gray-200 font-semibold ">{title}</div>
       <div className="cursor-pointer">
         {isDarkModeEnabled ? (
           <MdLightMode
