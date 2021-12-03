@@ -6,7 +6,9 @@ export const Footer = ({ height }) => {
       className="p-4 flex flex-col justify-center items-center"
       style={{ height }}
     >
-      <div className="font-cursive text-4xl">Shivaansh Agarwal</div>
+      <div className="font-cursive text-4xl dark:text-gray-200">
+        Shivaansh Agarwal
+      </div>
       <SocialMediaBar />
     </footer>
   );
