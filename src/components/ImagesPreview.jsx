@@ -2,7 +2,7 @@ export const ImagesPreview = ({ imagesList }) => {
   return (
     <div className="bg-gray-300 dark:bg-gray-900 w-full h-4/6 mt-8 flex flex-row flex-wrap p-4 overflow-y-auto shadow-lg rounded">
       {imagesList.length === 0 && (
-        <p className="flex justify-center items-center w-full h-full text-gray-900">
+        <p className="flex justify-center items-center w-full h-full text-gray-900 dark:text-gray-300">
           No images uploaded yet
         </p>
       )}
