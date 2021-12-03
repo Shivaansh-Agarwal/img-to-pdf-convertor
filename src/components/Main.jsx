@@ -63,24 +63,7 @@ function generatePDF(imagesList, imagesDimensionsList) {
       const width = srcWidth;
       doc.addImage(imgDataURL, imageFormat, 0, 10, width, height);
     }
-
-    // if (srcWidth > srcHeight) {
-    //   doc.addImage(imgDataURL, imageFormat, 0, 20, A4_WIDTH, 180);
-    // } else {
-    //   const { width, height } = getAspectRatioFit(
-    //     srcWidth,
-    //     srcHeight,
-    //     A4_WIDTH,
-    //     A4_HEIGHT
-    //   );
-    //   doc.addImage(imgDataURL, imageFormat, 0, 20, width, height);
-    // }
   });
   const pdfURL = doc.output("bloburl");
   window.open(pdfURL, "_blank");
-}
-
-function getAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
-  const ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
-  return { width: srcWidth * ratio, height: srcHeight * ratio };
 }
