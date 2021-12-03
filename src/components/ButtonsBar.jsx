@@ -3,6 +3,7 @@ export const ButtonsBar = ({
   setImagesList,
   uploadPreviewImages,
   generatePDF,
+  imagesDimensionsList,
 }) => {
   return (
     <div className="flex flex-row flex-wrap justify-start items-center">
@@ -28,7 +29,7 @@ export const ButtonsBar = ({
         }`}
         disabled={imagesList.length === 0}
         onClick={() => {
-          generatePDF(imagesList);
+          generatePDF(imagesList, imagesDimensionsList);
         }}
       >
         Generate PDF
